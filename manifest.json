@@ -1,0 +1,19 @@
+{
+
+  "description": "first version of parents control, block view on sites with adult content",
+  "manifest_version": 2,
+  "name": "hideAdultVideo",
+  "version": "1.0",
+  "homepage_url": "https://github.com/BlackChaose/hide_adultVideo",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.freexcafe.com/*","*://*.pornhub.com/*","*://*.xnxx.com/*"],
+      "js": ["hideadultvideo.js"]
+    }
+  ]
+
+}
