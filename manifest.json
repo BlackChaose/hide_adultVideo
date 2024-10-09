@@ -11,7 +11,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.freexcafe.com/*","*://*.pornhub.com/*","*://*.xnxx.com/*","*://*.sluts.com/*"],
+      "matches": ["*://*.freexcafe.com/*","*://*.pornhub.com/*","*://*.xnxx.com/*","*://*.sluts.com/*", "*://*.livecam.com/*"],
       "js": ["hideadultvideo.js"]
     }
   ]
