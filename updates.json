@@ -1,0 +1,18 @@
+{
+  "addons": {
+    "{f2feface-f0fc-4984-98fc-4a5055ced838}": {
+      "updates": [
+        {
+          "version": "1.0",
+          "update_link": "https://github.com/BlackChaose/hide_adultVideo/releases/download/hideAdultVideo_version1.0/e782d0970cfa4cbd9c92-1.0.xpi",
+	  "update_hash": "sha256:76b46c49b118e4e5dd72e1ea81ea4970f0949157c25c42d26f5d5b9e693c8b2f"
+        },
+        {
+          "version": "1.75",
+          "update_link": "https://github.com/BlackChaose/hide_adultVideo/releases/download/hideAdultVideo_v.1.7.5/e782d0970cfa4cbd9c92-1.7.5.xpi",
+          "update_hash": "sha256:8c18d58233b30e591ed77b96499087e419e559aa51623be100b1a8cffc20dcb9"
+	}
+      ]
+    }
+  }
+}
