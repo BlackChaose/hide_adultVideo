@@ -1,6 +1,3 @@
-/*
-Just draw a border round the document.body.
-*/
 async function loadTextFile(url) {
     try {
         const response = await fetch(url);
@@ -36,6 +33,8 @@ async function checkUrlInArray(dataArray) {
 	.map(item=>item.trim())
 	.filter(item => domain_ === item);
     if (matches.length > 0) {
+	    create_canvas_element();
+		animate();
 		blockDisplay();
 		return(true);
     } else {
@@ -43,8 +42,8 @@ async function checkUrlInArray(dataArray) {
     }
 }
 async function blockDisplay(){
-	document.body.style.border = "5px solid red";
 	var hdv1 = document.createElement("div");
+	hdv1.id="0xblckwindow1337165892";
 	hdv1.style.width="100%"; 
 	hdv1.style.height="100%";
 	hdv1.style.position="fixed"
@@ -52,19 +51,80 @@ async function blockDisplay(){
 	hdv1.style.left="0";
 	hdv1.style.zIndex="999999999";
 	hdv1.style.display="block";
-	hdv1.style.backgroundColor="blue";
+	hdv1.style.backgroundColor="rgb(0,0,0,30%)";
+	hdv1.style.cursor="not-allowed";
 	var text2=document.createElement("p");
-	text2.style.color="yellow";
-	text2.style.fontSize="24";
+	text2.style.color="lightgreen";
+	text2.style.fontSize="24px";
 	text2.style.fontWeight="bold" 
-	text2.textContent="Error 403: Forbidden for you, baby!";
+	text2.textContent="¡ⵉᚱᚱΩᚱ ⵖⴲვ: ΦΩᚱあᛁΔΔⵉΝ ΦΩᚱ ΥΩⵡ, あΑあΥ!";
 	text2.style.top="45%" 
 	text2.style.left="45%" 
 	text2.style.position="fixed" 
+	text2.style.cursor="not-allowed"
 	hdv1.append(text2);
+	
 	document.body.append(hdv1);
 }
+	var matrixCanvas = document.createElement("canvas");
+    const matrixCtx = matrixCanvas.getContext('2d');
+	matrixCanvas.width = window.innerWidth;
+    matrixCanvas.height = window.innerHeight;
+	const columns = Math.floor(matrixCanvas.width / 20);
+    const drops = Array(columns).fill(1);
+    const symbols = 
+        'ابجحخدذرزسشصضطظعغفقكلمنهوي0123456789' + 
+        'ანბანიაბგდევზთიკლმნოპჟრსტუფქღყშჩცძტუფქ' + 
+        'ΓαλλικάΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' + 
+        '你好你我他是的在这有个吗吗不一个二三四五六七八九十百千万个' + 
+        'ⴰⴱⴲⴳⴴⴵⴶⴷⴸⴹⴺⴻⴼⴽⴾⴿⵀⵁⵂⵃⵄⵅⵆⵇⵈⵉⵊⵋⵌⵍⵎⵏⵐⵑⵒⵓⵔⵕⵖⵗⵘⵙⵚⵛⵜⵝⵞⵟⵠⵡⵢⵣⵤⵥⵦⵧⵯ⵰'+ 
+		'カキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン'+
+		'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん'+
+		'ཀཁགངཅཆཇཉཏཐདནཔཕབམཙཚཛཛྷཝཞཟའཡརལཤཥསཧཨ'+
+		'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛋᛏᛒᛘᛚᛜᛞ'+
+		'ܐܒܓܕܗܘܙܚܛܝܟܠܡܢܣܥܦܨܩܪܫܬ'+
+		'ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՅՀՂՑՎՓՔՕՖ'+
+		'กขคฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟมยรลวศสหฬอฮ'+
+		'अआइईउऊऋएऐओऔअःकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसह'+
+		'ᠠᠡᠢᠣᠤᠥᠦᠧᠨᠩᠪᠫᠬᠭᠮᠯᠱᠲᠳᠴᠵᠶᠸᠹᠺᠻᠼᠽᠾᠿ'+
+		'абвгҕдежзийкҡлмнңопрстуфхыэюя';
+	
+function create_canvas_element(){
+	matrixCanvas.id="matrix_0x1337541269";
+	matrixCanvas.style.position="fixed"
+	matrixCanvas.style.width = "100%";
+    matrixCanvas.style.height = "100%";
+	matrixCanvas.style.top="0";
+	matrixCanvas.style.left="0";
+	matrixCanvas.style.zIndex="999999990";
+	matrixCanvas.style.display="block";
+	matrixCanvas.style.cursor="not-allowed";
+	document.body.append(matrixCanvas);
+   }
+	
+    function drawMatrix() {
+        matrixCtx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        matrixCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
 
+        matrixCtx.fillStyle = '#0F0';
+        matrixCtx.font = '20px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = symbols.charAt(Math.floor(Math.random() * symbols.length));
+            matrixCtx.fillText(text, i * 20, drops[i] * 20);
+
+            if (drops[i] * 20 > matrixCanvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i] += 0.75;
+        }
+    }
+
+
+async   function animate() {
+		drawMatrix();
+        requestAnimationFrame(animate);
+    }
 
 const url = 'https://raw.githubusercontent.com/BlackChaose/hide_adultVideo/refs/heads/main/blacklist.lst';
 getData(url).then(dataArray => {
