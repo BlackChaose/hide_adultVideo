@@ -46,25 +46,29 @@ async function blockDisplay(){
 	hdv1.id="0xblckwindow1337165892";
 	hdv1.style.width="100%"; 
 	hdv1.style.height="100%";
-	hdv1.style.position="fixed"
-	hdv1.style.top="0";
-	hdv1.style.left="0";
 	hdv1.style.zIndex="999999999";
-	hdv1.style.display="block";
+	hdv1.style.display="flex";
+	hdv1.style.justifyContent="center";
+	hdv1.style.alignItems="top";
 	hdv1.style.backgroundColor="rgb(0,0,0,30%)";
 	hdv1.style.cursor="not-allowed";
 	var text2=document.createElement("p");
 	text2.style.color="lightgreen";
 	text2.style.fontSize="24px";
-	text2.style.fontWeight="bold" 
+	text2.style.fontWeight="bold"; 
+	text2.style.textAligin="center";
+	text2.style.position="absolute";
+	text2.style.zIndex="999999999";
+	text2.style.top="45%";
 	text2.textContent="¡ⵉᚱᚱΩᚱ ⵖⴲვ: ΦΩᚱあᛁΔΔⵉΝ ΦΩᚱ ΥΩⵡ, あΑあΥ!";
-	text2.style.top="45%" 
-	text2.style.left="45%" 
-	text2.style.position="fixed" 
 	text2.style.cursor="not-allowed"
+	text2.style.padding="30px";
+	text2.style.margin="30px";
+	text2.style.backgroundColor = 'rgba(0, 128, 0, 0.25)'; // Полупрозрачный зеленый
+    text2.style.borderRadius = '12px';
 	hdv1.append(text2);
-	
 	document.body.append(hdv1);
+	document.title = "¡Blocked! - Adult content";
 }
 	var matrixCanvas = document.createElement("canvas");
     const matrixCtx = matrixCanvas.getContext('2d');
