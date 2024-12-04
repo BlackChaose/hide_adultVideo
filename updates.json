@@ -26,6 +26,11 @@
           "version": "1.8.26",
           "update_link": "https://github.com/BlackChaose/hide_adultVideo/releases/download/version_1.8.26/e782d0970cfa4cbd9c92-1.8.26.xpi",
           "update_hash": "sha256:0fd78d80fc78474ee2764d5116602f830e03e7efb17e9200ff5506a82cf84612"
+	},
+	{
+          "version": "1.8.27",
+          "update_link": "https://github.com/BlackChaose/hide_adultVideo/releases/download/version_1.8.27/hideadultvideo-1.8.27.xpi",
+          "update_hash": "sha256:63584cd5a33bb822cad983b9863725d4553ee2b0cf926f78964053bc7e58c8e3"
 	}
       ]
     }
